@@ -27,9 +27,11 @@ jobs:
         
     - name: Download BATCH NGROK_AP - NGROK_CHECK - NGROK_LOOP.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/cudsav/WindowsRDP/main/Files/NGROK_AP.bat -OutFile NGROK_AP.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/cudsav/WindowsRDP/main/Files/NGROK_CHECK.bat -OutFile NGROK_CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/cudsav/WindowsRDP/main/Files/NGROK_LOOP.bat -OutFile NGROK_LOOP.bat
+        
+        Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/NGROK-AP.bat -OutFile NGROK-AP.bat
+        Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://github.com/avgchamara/WindowsRDP/raw/main/loop.bat -OutFile loop.bat
+
         
     - name: Create a NGROK .yml file.
       run: start NGROK_AP.bat
